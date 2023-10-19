@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
+# This controller handles CRUD operations for Entities.
 class EntitiesController < ApplicationController
   before_action :set_entity, only: %i[show edit update destroy]
 
   # GET /entities or /entities.json
   def index
-    @current_user = current_user
     @entities = Entity.where(user_id: current_user.id)
     @groups = Group.where(user_id: current_user.id)
   end
@@ -13,7 +15,6 @@ class EntitiesController < ApplicationController
 
   # GET /entities/new
   def new
-    @current_user = current_user
     @entity = Entity.new
     @groups = Group.where(user_id: current_user.id)
     @users = User.where(id: current_user.id)
@@ -24,8 +25,6 @@ class EntitiesController < ApplicationController
 
   # POST /entities or /entities.json
   def create
-    @current_user = current_user
-    @users = User.where(id: current_user.id)
     @entity = Entity.new(entity_params)
 
     respond_to do |format|
@@ -38,6 +37,7 @@ class EntitiesController < ApplicationController
       end
     end
   end
+
   # PATCH/PUT /entities/1 or /entities/1.json
   def update
     respond_to do |format|
@@ -50,6 +50,7 @@ class EntitiesController < ApplicationController
       end
     end
   end
+
   # DELETE /entities/1 or /entities/1.json
   def destroy
     @entity.destroy
