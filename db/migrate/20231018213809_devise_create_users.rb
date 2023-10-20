@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Migration to create the users table with Devise fields.
+# This includes fields for modules like database_authenticatable, recoverable, and rememberable.
+# Additional modules like trackable, confirmable, and lockable are also defined but commented out.
 class DeviseCreateUsers < ActiveRecord::Migration[7.0]
   def change
     create_table :users do |t|
