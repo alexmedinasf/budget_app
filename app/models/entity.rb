@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Represents an individual entity associated with a user and potentially multiple groups.
 class Entity < ApplicationRecord
   belongs_to :user, foreign_key: :user_id

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # ApplicationController is the base controller class for your Ruby on Rails application.
 # It provides common configurations, CSRF protection, and customization for Devise.
 class ApplicationController < ActionController::Base

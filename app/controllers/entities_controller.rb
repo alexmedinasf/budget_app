@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This controller handles CRUD operations for Entities.
 class EntitiesController < ApplicationController
   before_action :set_entity, only: %i[show edit update destroy]

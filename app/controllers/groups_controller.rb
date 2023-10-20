@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This controller handles CRUD operations for Groups.
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]

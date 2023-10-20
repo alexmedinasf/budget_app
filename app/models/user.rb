@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Represents a user of the application with authentication capabilities.
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
