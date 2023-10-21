@@ -86,7 +86,7 @@ html {
   display: inline-block;
   color: black;
   font-weight: bold;
-  font-size:larger;
+  font-size: larger;
   padding: 10px 20px;
   margin-bottom: 1%;
   text-decoration: none;
@@ -204,13 +204,13 @@ html {
 }
 
 .transaction-box {
-    background-color: #fff;
-    margin: 10px 5%;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    box-sizing: border-box;
+  background-color: #fff;
+  margin: 10px 5%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  box-sizing: border-box;
 }
 
 .transaction-box.group-button {
@@ -220,7 +220,7 @@ html {
   font-weight: bold;
   font-size: larger;
   text-decoration: none;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   padding: 15px 0;
   border-radius: 5px;
   box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
