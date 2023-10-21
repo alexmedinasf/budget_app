@@ -15,7 +15,7 @@
  */
 html {
   background: rgb(0, 22, 47);
-  background: linear-gradient(0deg, rgba(0, 22, 47, 1) 0%, rgba(55, 120, 194, 1) 100%);
+  background: white;
   width: 100.2vw;
   height: 100vh;
   overflow-x: hidden;
@@ -32,13 +32,16 @@ html {
 }
 
 #landing h1 {
-  color: white;
+  color: black;
   font-family: 'proxima-nova', sans-serif;
   font-size: 4em;
 }
 
 #landing a {
-  color: white;
+  display: inline-block;
+  color: black;
+  padding: 10px 20px;
+  background-color: #3498db;
   text-decoration: none;
   font-family: 'proxima-nova', sans-serif;
   font-size: 1.8em;
@@ -46,29 +49,46 @@ html {
 
 #nav a {
   margin-right: 3%;
+  padding: 8px 16px;
+  font-weight: bold;
   color: black;
   text-decoration: none;
   font-family: 'proxima-nova', sans-serif;
 }
 
 #groupIndex a {
-  color: white;
+  display: inline-block;
+  color: black;
+  padding: 10px 20px;
+  margin-bottom: 1%;
   text-decoration: none;
+  background-color: #5fb523;
 }
 
 #groupNew a {
-  color: white;
+  display: inline-block;
+  color: black;
+  padding: 10px 20px;
   text-decoration: none;
+  background-color: #5fb523;
 }
 
 #entitiesIndex a {
-  color: white;
+  display: inline-block;
+  color: black;
+  padding: 10px 20px;
+  margin-bottom: 1%;
   text-decoration: none;
+  background-color: #5fb523;
 }
 
 #signUp a {
-  color: white;
+  display: inline-block;
+  color: black;
+  margin-top: 1%;
+  padding: 10px 20px;
   text-decoration: none;
+  background-color: #3498db;
 }
 
 #landing a:nth-child(4) {
@@ -76,14 +96,14 @@ html {
 }
 
 #landing p {
-  color: white;
+  color: black;
   font-family: 'proxima-nova', sans-serif;
 }
 
 #nav {
   width: 100%;
   height: 10%;
-  background-color: white;
+  background-color: rgba(55, 120, 194, 1);
   position: fixed;
   left: 0%;
   top: 0%;
@@ -102,19 +122,21 @@ html {
 }
 
 #groupPack {
+  font-size: 30px;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
 }
 
 #groupNew {
-  color: white;
+  color: black;
   text-decoration: none;
-  margin-top: 10%;
+  margin-top: 13%;
   font-family: 'proxima-nova', sans-serif;
 }
 
 #entitiesIndex {
-  color: white;
+  color: black;
   font-family: 'proxima-nova', sans-serif;
   margin-top: 20%;
 }
@@ -125,12 +147,12 @@ html {
 
 #signUp {
   margin-top: 20%;
-  color: white;
+  color: black;
   font-family: 'proxima-nova', sans-serif;
 }
 
 #groupIndex {
   margin-top: 30%;
   font-family: 'proxima-nova', sans-serif;
-  color: white;
+  color: black;
 }
