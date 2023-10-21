@@ -122,6 +122,8 @@ html {
 }
 
 #groupPack {
+  font-size: 30px;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
 }
