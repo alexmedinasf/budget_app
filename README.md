@@ -151,7 +151,7 @@ If you like this project hit the ⭐️ button!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank MIcroverse for the opportunity and my colleagues for all the help provided
+I would like to thank MIcroverse for the opportunity and my colleagues for all the help provided and Gregoire Vella for the original concept design. Check is work! https://www.behance.net/gregoirevella
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
