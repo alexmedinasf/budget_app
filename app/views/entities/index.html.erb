@@ -8,7 +8,7 @@
 
 <section id="entitiesIndex">
   <h1>Entities</h1>
-  <%= link_to "Add Transaction", new_entity_path, class: "transaction-box" %>
+  <%= link_to "Add Transaction", new_entity_path, class: "transaction-box group-button" %>
   <% @entities.each do |entity| %>
     <% totalSum += entity.amount%>
     <div class="transaction-box">
@@ -36,7 +36,6 @@
       </table>
     </div>
   <% end %>
-
   <div class="transaction-box">
     <h2>Total Amount : <%= totalSum %></h2>
   </div>
