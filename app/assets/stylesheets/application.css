@@ -139,7 +139,7 @@ html {
 }
 
 .group-icon {
-  flex: 1; 
+  flex: 1;
   font-size: 50px;
   width: 20%;
   height: auto;
@@ -173,6 +173,12 @@ html {
   margin-top: 20%;
 }
 
+
+.transaction-box td {
+    padding: 5px;
+  }
+  
+
 #entitiesIndex td {
   font-size: 0.8em;
 }
@@ -190,17 +196,14 @@ html {
 }
 
 .transaction-box {
-  background-color: #ffffff; /* Background branco para cada caixa de transação */
+  background-color: #fff; /* Background branco para cada caixa de transação */
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0, 2px, 4px, rgba(0,0,0,0.1);
 }
 
 .transaction-box table {
   width: 100%;
   border-collapse: collapse;
-}
- .transaction-box td {
-  padding: 5px;
 }
