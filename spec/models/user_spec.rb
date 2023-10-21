@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
     it 'validates the length of name' do
       user.name = 'a' * 81
       expect(user).to_not be_valid
-      expect(user.errors[:name]).to include("is too long (maximum is 80 characters)")
+      expect(user.errors[:name]).to include('is too long (maximum is 80 characters)')
     end
   end
 
@@ -45,5 +45,4 @@ RSpec.describe User, type: :model do
       expect(user.encrypted_password).to be_present
     end
   end
-
 end

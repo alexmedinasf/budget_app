@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "landing/index.html.erb", type: :view do
+RSpec.describe 'landing/index.html.erb', type: :view do
   context 'landing page content' do
     it 'displays the CashTrack title' do
       render

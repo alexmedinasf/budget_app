@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "groups/index.html.erb", type: :view do
-  let(:group1) { create(:group, name: "Group1") }
-  let(:group2) { create(:group, name: "Group2") }
+RSpec.describe 'groups/index.html.erb', type: :view do
+  let(:group1) { create(:group, name: 'Group1') }
+  let(:group2) { create(:group, name: 'Group2') }
   let(:entity1) { create(:entity, amount: 100, group_id: group1.id) }
   let(:entity2) { create(:entity, amount: 50, group_id: group1.id) }
   let(:entity3) { create(:entity, amount: 150, group_id: group2.id) }
@@ -37,5 +37,4 @@ RSpec.describe "groups/index.html.erb", type: :view do
     render
     expect(rendered).to have_link('New group', href: new_group_path)
   end
-
 end

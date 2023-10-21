@@ -12,7 +12,6 @@ RSpec.describe Entity, type: :model do
     it 'belongs to a user' do
       expect(entity.user).to eq(user)
     end
-
   end
 
   # Validations
@@ -23,7 +22,7 @@ RSpec.describe Entity, type: :model do
     end
 
     it 'validates length of name' do
-      entity.name = "a" * 81
+      entity.name = 'a' * 81
       expect(entity).to_not be_valid
     end
   end

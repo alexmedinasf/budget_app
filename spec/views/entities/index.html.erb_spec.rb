@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "entities/index.html.erb", type: :view do
-  let(:group1) { create(:group, name: "Group1") }
-  let(:group2) { create(:group, name: "Group2") }
-  let(:entity1) { create(:entity, name: "Entity1", amount: 100, group_id: group1.id) }
-  let(:entity2) { create(:entity, name: "Entity2", amount: 200, group_id: group2.id) }
-
+RSpec.describe 'entities/index.html.erb', type: :view do
+  let(:group1) { create(:group, name: 'Group1') }
+  let(:group2) { create(:group, name: 'Group2') }
+  let(:entity1) { create(:entity, name: 'Entity1', amount: 100, group_id: group1.id) }
+  let(:entity2) { create(:entity, name: 'Entity2', amount: 200, group_id: group2.id) }
 
   before do
     assign(:entities, [entity1, entity2])
