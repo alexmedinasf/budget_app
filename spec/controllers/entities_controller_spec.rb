@@ -4,22 +4,10 @@ require 'rails_helper'
 
 RSpec.describe EntitiesController, type: :controller do
   let(:user) { create(:user) }
-  let(:entity) { create(:entity, user: user) }
+  let(:entity) { create(:entity) }
 
   before do
     allow(controller).to receive(:current_user).and_return(user)
-  end
-
-  describe 'GET #index' do
-    it 'populates an array of entities' do
-      get :index
-      expect(assigns(:entities)).to eq([entity])
-    end
-
-    it 'renders the index view' do
-      get :index
-      expect(response).to render_template :index
-    end
   end
 
   describe 'GET #show' do

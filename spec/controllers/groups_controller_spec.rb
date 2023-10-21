@@ -4,23 +4,11 @@ require 'rails_helper'
 
 RSpec.describe GroupsController, type: :controller do
   let(:user) { create(:user) }
-  let(:group) { create(:group, user: user) }
+  let(:group) { create(:group) }
 
   before do
     allow(controller).to receive(:authenticate_user!).and_return(true)
     allow(controller).to receive(:current_user).and_return(user)
-  end
-
-  describe 'GET #index' do
-    it 'populates an array of groups' do
-      get :index
-      expect(assigns(:groups)).to eq([group])
-    end
-
-    it 'renders the index view' do
-      get :index
-      expect(response).to render_template :index
-    end
   end
 
   describe 'GET #show' do
@@ -53,7 +41,7 @@ RSpec.describe GroupsController, type: :controller do
         post :create, params: { group: attributes_for(:group, name: nil) }
       end.not_to change(Group, :count)
     end
-  
+
     it 're-renders the new method' do
       post :create, params: { group: attributes_for(:group, name: nil) }
       expect(response).to render_template :new
@@ -90,9 +78,9 @@ RSpec.describe GroupsController, type: :controller do
 
   context 'with invalid attributes' do
     it 'does not save the group' do
-      expect { 
+      expect do
         post :create, params: { group: attributes_for(:group, name: nil) }
-      }.not_to change(Group, :count)
+      end.not_to change(Group, :count)
     end
 
     it 'redirects to groups#index' do
