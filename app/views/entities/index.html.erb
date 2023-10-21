@@ -1,6 +1,5 @@
 <p style="color: green"><%= notice %></p>
 <% totalSum = 0%>
-
 <div id="nav">
   <h1>CashTrack</h1>
   <%= link_to "Categories", groups_path%>
@@ -8,46 +7,37 @@
 </div>
 
 <section id="entitiesIndex">
-<h1>Entities</h1>
-<%= link_to "Add Transaction", new_entity_path %>
-<table>
-
-  <tr>
-      <td><strong>Category</strong> </td>
-      <td><strong>Transaction</strong></td>
-      <td><strong>Amount</strong></td>
-      <td><strong>Date</strong></td>
-      <td><strong>Actions</strong>
-    </tr>  
-
-
-    <% @entities.each do |entity| %>
-      <% totalSum += entity.amount%>
-    <tr>
-        <td>
-            <% @groups.each do |groups| %>
-              <%if groups.id == entity.group_id%>
-                <%=groups.name%>
+  <h1>Entities</h1>
+  <%= link_to "Add Transaction", new_entity_path, class: "transaction-box" %>
+  <% @entities.each do |entity| %>
+    <% totalSum += entity.amount%>
+    <div class="transaction-box">
+      <table>
+        <tr>
+          <td><strong>Category</strong></td>
+          <td><strong>Transaction</strong></td>
+          <td><strong>Amount</strong></td>
+          <td><strong>Date</strong></td>
+          <td><strong>Actions</strong></td>
+        </tr>  
+        <tr>
+          <td>
+              <% @groups.each do |groups| %>
+                <%if groups.id == entity.group_id%>
+                  <%=groups.name%>
+                <%end%>
               <%end%>
-           <%end%>
           </td>
+          <td><%= entity.name %></td>
+          <td><%= entity.amount %></td>
+          <td><%= entity.created_at %></td>
+          <td><%= link_to "Delete", entity %></td>
+        </tr>
+      </table>
+    </div>
+  <% end %>
 
-        <td><%= entity.name %></td>
-
-        <td><%= entity.amount %></td>
-
-        <td><%= entity.created_at %></td>
-
-        <td><%= link_to "Delete", entity %></td>
-
-    </tr>
-
-    <%end%>
-
-
-</table>
-
-<h2>Total Amout : <%= totalSum %></h2>
-
-
+  <div class="transaction-box">
+    <h2>Total Amount : <%= totalSum %></h2>
+  </div>
 </section>
