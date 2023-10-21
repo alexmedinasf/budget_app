@@ -59,16 +59,24 @@ html {
 #groupIndex a {
   display: inline-block;
   color: black;
+  font-size: larger;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 90%;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 20px 20px;
   margin-bottom: 1%;
   text-decoration: none;
   background-color: #5fb523;
+  box-sizing: border-box;
 }
 
 #groupNew a {
   display: inline-block;
   color: black;
+  font-weight: bold;
+  font-size: larger;
   padding: 10px 20px;
   text-decoration: none;
   background-color: #5fb523;
@@ -77,6 +85,8 @@ html {
 #entitiesIndex a {
   display: inline-block;
   color: black;
+  font-weight: bold;
+  font-size:larger;
   padding: 10px 20px;
   margin-bottom: 1%;
   text-decoration: none;
@@ -124,8 +134,8 @@ html {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #f5f5f5; /* Just an example background color, you can adjust */
-  border-radius: 10px; /* Add some rounded corners */
+  background-color: #f5f5f5;
+  border-radius: 10px;
 }
 
 .group-content {
@@ -194,11 +204,28 @@ html {
 }
 
 .transaction-box {
-  background-color: #fff;
-  margin-bottom: 10px;
-  padding: 10px;
+    background-color: #fff;
+    margin: 10px 5%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.transaction-box.group-button {
+  display: block;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: larger;
+  text-decoration: none;
+  background-color: #4CAF50;
+  padding: 15px 0;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  margin: 10px 5%;
 }
 
 .transaction-box table {

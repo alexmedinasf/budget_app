@@ -9,7 +9,8 @@
 
 <section id="entitiesIndex">
   <h1>Entities</h1>
-  <%= link_to "Add Transaction", new_entity_path, class: "transaction-box" %>
+  <%= link_to "Add Transaction", new_entity_path, class: "transaction-box group-button" %>
+
 
   <% @entities.each do |entity| %>
     <% totalSum += entity.amount%>
