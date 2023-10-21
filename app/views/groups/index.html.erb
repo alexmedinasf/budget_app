@@ -15,18 +15,19 @@
 <div id="groups">
   <% @groups.each do |group| %>
     <%= render group %>
+    
+    <% @entities.each do |entities| %>
+      <% if entities.group_id == group.id %>
+        <% groupSum += entities.amount %>
+      <% end %>
+    <% end %>
+    
+    <h4>Total Group amount: $<%= groupSum %></h4>
     <p>
       <%= link_to "Show this group", group %>
     </p>
-    <% @entities.each do |entities|%>
-      <%if entities.group_id == group.id%>
-      <%groupSum+=entities.amount%>
-      
-      <%end%>
-      
-    <%end%>
-    <h4>Total Group amount:<%=groupSum%></h4>
-     <%groupSum=0%>
+    
+    <% groupSum = 0 %>
   <% end %>
 </div>
 

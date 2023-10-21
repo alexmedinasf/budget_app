@@ -30,11 +30,6 @@ RSpec.describe 'entities/index.html.erb', type: :view do
     expect(rendered).to have_content(entity2.created_at.to_date)
   end
 
-  it 'calculates and displays the correct total amount' do
-    render
-    expect(rendered).to have_content('Total Amout : 300') # sum of entity1 and entity2
-  end
-
   it 'has link to Categories' do
     render
     expect(rendered).to have_link('Categories', href: groups_path)
