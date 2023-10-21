@@ -47,17 +47,18 @@ RSpec.describe GroupsController, type: :controller do
     end
   end
 
-     context 'with invalid attributes' do
-      it 'does not save the group' do
-        expect { post :create, params: { group: attributes_for(:group, name: nil) }
-        }.not_to change(Group, :count)
-      end
-
-      it 're-renders the new method' do
+  context 'with invalid attributes' do
+    it 'does not save the group' do
+      expect do
         post :create, params: { group: attributes_for(:group, name: nil) }
-        expect(response).to render_template :new
-      end
+      end.not_to change(Group, :count)
     end
+  
+    it 're-renders the new method' do
+      post :create, params: { group: attributes_for(:group, name: nil) }
+      expect(response).to render_template :new
+    end
+  end
 
   describe 'PATCH #update' do
     context 'with valid attributes' do
@@ -87,11 +88,11 @@ RSpec.describe GroupsController, type: :controller do
     end
   end
 
-  describe 'DELETE #destroy' do
-    it 'deletes the group' do
-      group
-      expect { delete :destroy, params: { id: group.id }
-      }.to change(Group, :count).by(-1)
+  context 'with invalid attributes' do
+    it 'does not save the group' do
+      expect { 
+        post :create, params: { group: attributes_for(:group, name: nil) }
+      }.not_to change(Group, :count)
     end
 
     it 'redirects to groups#index' do

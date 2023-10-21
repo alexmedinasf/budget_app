@@ -46,17 +46,18 @@ RSpec.describe EntitiesController, type: :controller do
     end
   end
 
-    context 'with invalid attributes' do
-      it 'does not save the entity' do
-        expect { post :create, params: { entity: attributes_for(:entity, name: nil) }
-        }.not_to change(Entity, :count)
-      end
-
-      it 're-renders the new method' do
+  context 'with invalid attributes' do
+    it 'does not save the entity' do
+      expect do
         post :create, params: { entity: attributes_for(:entity, name: nil) }
-        expect(response).to render_template :new
-      end
+      end.not_to change(Entity, :count)
     end
+
+    it 're-renders the new method' do
+      post :create, params: { entity: attributes_for(:entity, name: nil) }
+      expect(response).to render_template :new
+    end
+  end
 
   describe 'PATCH #update' do
     context 'with valid attributes' do
@@ -89,8 +90,9 @@ RSpec.describe EntitiesController, type: :controller do
   describe 'DELETE #destroy' do
     it 'deletes the entity' do
       entity
-      expect { delete :destroy, params: { id: entity.id }
-      }.to change(Entity, :count).by(-1)
+      expect do
+        delete :destroy, params: { id: entity.id }
+      end.to change(Entity, :count).by(-1)
     end
 
     it 'redirects to entities#index' do
