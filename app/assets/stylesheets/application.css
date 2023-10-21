@@ -176,7 +176,7 @@ html {
 .transaction-box td {
   padding: 5px;
 }
-  
+
 #entitiesIndex td {
   font-size: 0.8em;
 }
@@ -198,7 +198,7 @@ html {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 2px, 4px, rgba(0, 0, 0, 0.2);
+  box-shadow: 0, 2, 4, rgba(0, 0, 0, 0.2);
 }
 
 .transaction-box table {
