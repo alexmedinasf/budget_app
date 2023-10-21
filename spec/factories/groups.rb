@@ -3,5 +3,4 @@ FactoryBot.define do
       name { 'Sample Group' }
       user
     end
-  end
-  
+end

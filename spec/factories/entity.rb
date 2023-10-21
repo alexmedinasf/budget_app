@@ -3,5 +3,4 @@ FactoryBot.define do
       name { 'Sample Entity' }
       user
     end
-  end
-  
+end
