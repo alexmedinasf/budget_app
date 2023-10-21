@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :group do
-      name { 'Sample Group' }
-      user
+  name { 'Sample Group' }
+  user
   end
 end
