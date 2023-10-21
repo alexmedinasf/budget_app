@@ -1,7 +1,6 @@
 FactoryBot.define do
   factory :user do
-    # Assuming your User model has attributes like name, email, and password.
-  name { 'John Doe' }
+    name { 'John Doe' }
   email { Faker::Internet.unique.email }
   password { 'securepassword' }
   password_confirmation { 'securepassword' }
