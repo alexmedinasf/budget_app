@@ -34,7 +34,7 @@
 
 Budget App is a personal finances App, that allow you to track your outgoings.
 
-# Check the live demo [here](https://www.loom.com/share/9b139f84e922416a820fef9eff242d89)
+# Check the video [here](https://www.loom.com/share/9b139f84e922416a820fef9eff242d89)
 
 ## 🛠 Built With <a name="built-with"></a>
 
